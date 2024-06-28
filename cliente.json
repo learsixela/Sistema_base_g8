@@ -1,0 +1,41 @@
+[
+{
+  "model": "testadl.cliente",
+  "pk": 1,
+  "fields": {
+    "nombre": "Cliente 01",
+    "apellido": "apellido1",
+    "edad": 18,
+    "email": "cli1@mail.com",
+    "creacion": "2024-06-28T00:42:11.299Z",
+    "actualizacion": "2024-06-28T00:42:11.299Z",
+    "cliente_activo": true
+  }
+},
+{
+  "model": "testadl.cliente",
+  "pk": 2,
+  "fields": {
+    "nombre": "Cliente 02",
+    "apellido": "apellido2",
+    "edad": 33,
+    "email": "cli2@yahoo.es",
+    "creacion": "2024-06-28T00:56:28.459Z",
+    "actualizacion": "2024-06-28T00:56:28.460Z",
+    "cliente_activo": true
+  }
+},
+{
+  "model": "testadl.cliente",
+  "pk": 3,
+  "fields": {
+    "nombre": "Cliente 03",
+    "apellido": "apellido3",
+    "edad": 33,
+    "email": "cli3@yahoo.es",
+    "creacion": "2024-06-28T00:56:28.459Z",
+    "actualizacion": "2024-06-28T00:56:28.460Z",
+    "cliente_activo": true
+  }
+}
+]

@@ -1,6 +1,8 @@
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,redirect
+from django.http import HttpResponse, JsonResponse
 from django.contrib import messages
 from .models import Pelicula, Cliente
+from .services import PeliculaModel
 
 # Create your views here.
 def index(request):
@@ -23,7 +25,7 @@ def index(request):
     print("Pelicula con filter ",peli2)  
 
     #select * from peliculas WHERE id = 2;
-    pelicula_unica = Pelicula.objects.get(id=2)
+    pelicula_unica = Pelicula.objects.get(id=1)
     #update o actualizacion de un registro
     pelicula_unica.duracion = 3
     #pelicula_unica.save()
@@ -73,3 +75,14 @@ def editar_cliente(request):
 
 def eliminar_cliente(request):
     pass
+
+
+def get_peliculas(request):
+    peliculas= PeliculaModel.obtener_peliculas
+    arch = open('peliculas.txt','a')
+    for p in peliculas:
+        arch.write(p.titulo)
+    
+    arch.close()
+
+    return JsonResponse(peliculas)
